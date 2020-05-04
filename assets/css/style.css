@@ -50,11 +50,6 @@ a {
   transition: all 0.5s ease-in-out 0s;
 }
 
-#hero a {
-  font-size: 20px;
-  color: #898989;
-}
-
 a:hover {
   transition: all 0.5s ease-in-out 0s;
 }
@@ -228,10 +223,6 @@ nav ul li a {
   cursor: pointer;
 }
 
-.active {
-  color: #000;
-}
-
 /*--------------------------------------------------------------
 # Hero
 --------------------------------------------------------------*/
@@ -274,6 +265,21 @@ nav ul li a {
 .hero-content .list-social li i {
   color: #898989;
   font-size: 20px;
+  transition: color 0.5s ease-in-out 0s;
+}
+
+.hero-content .list-social li i:hover {
+  color: #b8a07e;
+}
+
+.hero-content .list-social li a {
+  color: #898989;
+  font-size: 20px;
+  transition: color 0.5s ease-in-out 0s;
+}
+
+.hero-content .list-social li a:hover {
+  color: #b8a07e;
 }
 
 /*-----------------------------------------------------------------------------------*/

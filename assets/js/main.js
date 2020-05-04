@@ -17,14 +17,9 @@ $(document).ready(function () {
     e.preventDefault();
     $(document).off("scroll");
 
-    $("a").each(function () {
-      $(this).removeClass("active");
-      if ($(window).width() < 768) {
-        $(".nav-menu").slideUp();
-      }
-    });
-
-    $(this).addClass("active");
+    if ($(window).width() < 768) {
+      $(".nav-menu").slideUp();
+    }
 
     var target = this.hash,
       menu = target;
@@ -69,8 +64,6 @@ $(document).ready(function () {
       $("#main-nav-subpage").hide();
       $("#main-nav-subpage").addClass("subpage-nav");
     }
-
-    $(".nav-menu").slideUp();
   });
 
   // ========================================================================= //
@@ -78,11 +71,7 @@ $(document).ready(function () {
   // ========================================================================= //
 
   $(".responsive").on("click", function (e) {
-    $(".nav-menu").slideDown();
-  });
-
-  $("#main").on("click", function (e) {
-    $(".nav-menu").slideUp();
+    $(".nav-menu").slideToggle();
   });
 
   // ========================================================================= //
