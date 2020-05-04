@@ -18,10 +18,13 @@ $(document).ready(function () {
     $(document).off("scroll");
 
     $("a").each(function () {
+      $(this).removeClass("active");
       if ($(window).width() < 768) {
         $(".nav-menu").slideUp();
       }
     });
+
+    $(this).addClass("active");
 
     var target = this.hash,
       menu = target;
