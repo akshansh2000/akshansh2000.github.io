@@ -100,7 +100,7 @@ $(document).ready(function () {
 
     typed.typed({
       strings: strings,
-      typeSpeed: 100,
+      typeSpeed: 50,
       loop: false,
     });
 
@@ -112,8 +112,8 @@ $(document).ready(function () {
   // ========================================================================= //
 
   $(".services-carousel").owlCarousel({
-    autoplay: true,
-    loop: true,
+    autoplay: false,
+    loop: false,
     margin: 20,
     dots: true,
     nav: false,

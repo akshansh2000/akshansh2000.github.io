@@ -1,5 +1,5 @@
 /**
-* Template Name: Folio - v2.0.1
+* Tempate Name: Folio - v2.0.1
 * Template URL: https://bootstrapmade.com/folio-bootstrap-portfolio-template/
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
@@ -283,7 +283,7 @@ nav ul li a {
   width: 100%;
   height: auto;
   background: #f7f7f7;
-  padding-top: 190px;
+  /* padding-top: 190px; */
 }
 
 #about .div-img-bg {
@@ -305,12 +305,22 @@ nav ul li a {
   font-family: "Playfair Display", serif;
   font-size: 28px;
   text-align: left;
+  color: #898989;
 }
 
 #about .about-descr .separator {
-  max-width: 80%;
+  max-width: 100%;
   margin-bottom: 0;
   text-align: left;
+}
+
+.p-heading a {
+  color: #898989;
+}
+
+.p-heading a:hover {
+  color: #b8a07e;
+  transition: all 0.5s ease-in-out 0s;
 }
 
 /*--------------------------------------------------------------
@@ -354,7 +364,7 @@ nav ul li a {
 }
 
 .services-carousel .owl-dots {
-  margin-top: 5px;
+  margin-top: 30px;
   text-align: center;
 }
 
