@@ -52,14 +52,11 @@ a {
 
 #hero a {
   font-size: 20px;
+  color: #898989;
 }
 
 a:hover {
   transition: all 0.5s ease-in-out 0s;
-}
-
-#hero a:hover {
-  color: black;
 }
 
 a:hover,
@@ -142,7 +139,6 @@ p {
   padding-left: 10px;
   margin: 0 0 25px 0;
   line-height: 14px;
-  text-transform: uppercase;
 }
 
 .form-control:focus {
@@ -267,8 +263,6 @@ nav ul li a {
   letter-spacing: 3px;
   margin-top: 0;
   margin-bottom: 30px;
-  text-transform: capitalize;
-  color: black;
   font-weight: 500;
 }
 
@@ -278,7 +272,7 @@ nav ul li a {
 }
 
 .hero-content .list-social li i {
-  color: black;
+  color: #898989;
   font-size: 20px;
 }
 
@@ -751,7 +745,7 @@ blockquote {
 
 #footer .socials-media ul li a:hover {
   color: #b8a07e;
-  transition: all 0.3s ease-in-out 0s;
+  transition: all 0.5s ease-in-out 0s;
 }
 
 #footer p {
