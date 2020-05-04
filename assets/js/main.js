@@ -80,15 +80,17 @@ $(document).ready(function() {
   var typed = $(".typed");
 
   $(function() {
-    var strings = $('.typed-items').text();
-    strings = $('.typed-items').data('typed-person') + ',' + strings;
-    strings = strings.split(',');
+    // var strings = $('.typed-items').text().trim();
+    var strings = [$('.typed-items').data('typed-person')];
+    // strings = strings.split(',');
 
     typed.typed({
       strings: strings,
       typeSpeed: 100,
-      loop: true,
+      loop: false,
     });
+
+    document.getElementById('typed').style.textDecoration = "underline";
   });
 
   // ========================================================================= //
