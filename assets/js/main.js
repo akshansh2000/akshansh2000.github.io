@@ -85,6 +85,10 @@ $(document).ready(function () {
     var strings = [$(".typed-items").data("typed-person")];
     // strings = strings.split(',');
 
+    if ($(window).width() < 768) {
+      strings = [strings[0].split(" ")[0]];
+    }
+
     typed.typed({
       strings: strings,
       typeSpeed: 50,
