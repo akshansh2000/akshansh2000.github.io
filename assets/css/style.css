@@ -1078,6 +1078,11 @@ blockquote {
   }
 }
 
+.get-in-touch .list-social li i {
+  font-size: 50px;
+  margin-right: 20px;
+}
+
 /** Width between 320px to 0
  *  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  */

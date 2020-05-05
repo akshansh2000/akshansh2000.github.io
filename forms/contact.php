@@ -19,7 +19,7 @@
   $mail->SMTPAuth = true;
 
   $mail->Username = 'akshansh.portfolio@gmail.com';
-  $mail->Password = 'insecure#123';
+  $mail->Password = '*********';
 
   $mail->SetFrom($_POST['email'], $_POST['name']);
   $mail->AddReplyTo($_POST['email'], $_POST['name']);
