@@ -18,6 +18,11 @@ $(document).ready(function () {
     el.outerHTML = "<h2>" + el.innerHTML + "</h2>";
   }
 
+  if ($(window).width() < 445) {
+    var el = document.querySelector(".hero-content h2");
+    el.outerHTML = "<h3>" + el.innerHTML + "</h3>";
+  }
+
   $('a[href^="#"]').on("click", function (e) {
     e.preventDefault();
     $(document).off("scroll");
