@@ -1,50 +1,32 @@
 <?php
-  /**
-  * Requires the "PHP Email Form" library
-  * The "PHP Email Form" library is available only in the pro version of the template
-  * The library should be uploaded to: vendor/php-email-form/php-email-form.php
-  * For more info and help: https://bootstrapmade.com/php-email-form/
-  */
+  use PHPMailer\PHPMailer\PHPMailer;
+  use PHPMailer\PHPMailer\SMTP;
+  use PHPMailer\PHPMailer\Exception;
 
-  // Replace contact@example.com with your real receiving email address
-  $receiving_email_address = 'akshansh2000@gmail.com';
+  require '../vendor/autoload.php';
 
-  // if( file_exists($php_email_form = '../assets/vendor/php-email-form/php-email-form.php' )) {
-  //   include( $php_email_form );
-  // } else {
-  //   die( 'Unable to load the "PHP Email Form" Library!');
-  // }
+  $mail = new PHPMailer(true);
+  $mail->CharSet = 'UTF-8';
 
-  // $contact = new PHP_Email_Form;
-  // $contact->ajax = true;
-  
-  // $contact->to = $receiving_email_address;
-  // $contact->from_name = $_POST['name'];
-  // $contact->from_email = $_POST['email'];
-  // $contact->subject = $_POST['subject'];
+  $body = $_POST['message'];
 
-  // Uncomment below code if you want to use SMTP to send emails. You need to enter your correct SMTP credentials
-  /*
-  $contact->smtp = array(
-    'host' => 'example.com',
-    'username' => 'example',
-    'password' => 'pass',
-    'port' => '587'
-  );
-  */
+  $mail->IsSMTP();
+  $mail->Host = 'smtp.gmail.com';
 
-  // $contact->add_message( $_POST['name'], 'From');
-  // $contact->add_message( $_POST['email'], 'Email');
-  // $contact->add_message( $_POST['message'], 'Message', 10);
+  $mail->SMTPSecure = 'tls';
+  $mail->Port = 993;
+  $mail->SMTPDebug = 1;
+  $mail->SMTPAuth = true;
 
-  // echo $contact->send();
+  $mail->Username = 'akshansh.portfolio@gmail.com';
+  $mail->Password = 'insecure#123';
 
-  $message = $_POST['message'];
-  $message = "Name: ".$POST['name']."\n\n";
+  $mail->SetFrom($_POST['email'], $_POST['name']);
+  $mail->AddReplyTo($_POST['email'], $_POST['name']);
+  $mail->Subject = $_POST['subject'];
+  $mail->MsgHTML($body);
 
-  $headers = 'From: '.$_POST['email']."\r\n".
-  'Reply-To: '.$POST['email']."\r\n".
-  'X-Mailer: PHP/'.phpversion();
+  $mail->AddAddress('akshansh2000@gmail.com');
 
-  @mail($receiving_email_address, $_POST['subject'], $message, $headers);
+  $mail->send();
 ?>
