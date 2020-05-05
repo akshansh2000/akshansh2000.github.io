@@ -253,6 +253,13 @@ nav ul li a {
   color: black;
 }
 
+.hero-content h2 {
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  color: black;
+}
+
 .hero-content p {
   font-size: 13px;
   letter-spacing: 3px;
