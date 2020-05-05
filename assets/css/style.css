@@ -888,6 +888,7 @@ blockquote {
   .responsive {
     float: right;
     padding-top: 15px;
+    margin-top: -15px;
     display: block;
   }
   /* About */
