@@ -253,14 +253,11 @@ nav ul li a {
   color: black;
 }
 
-.hero-content h2 {
-  font-weight: 700;
-  margin-bottom: 10px;
-  text-transform: uppercase;
-  color: black;
-}
-
-.hero-content h3 {
+.hero-content h2,
+.hero-content h3,
+.hero-content h4,
+.hero-content h5,
+.hero-content h6 {
   font-weight: 700;
   margin-bottom: 10px;
   text-transform: uppercase;
