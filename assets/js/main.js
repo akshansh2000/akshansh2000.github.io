@@ -13,16 +13,16 @@ $(document).ready(function () {
 
   $(document).on("scroll", onScroll);
 
-  if ($(window).width() < 768 && $(window).width() > 444) {
+  if ($(window).width() < 768 && $(window).width() > 484) {
     var el = document.querySelector(".hero-content h1");
     el.outerHTML = "<h2>" + el.innerHTML + "</h2>";
-  } else if ($(window).width() < 445 && $(window).width() > 409) {
+  } else if ($(window).width() < 485 && $(window).width() > 429) {
     var el = document.querySelector(".hero-content h1");
     el.outerHTML = "<h3>" + el.innerHTML + "</h3>";
-  } else if ($(window).width() < 410 && $(window).width() > 369) {
+  } else if ($(window).width() < 430 && $(window).width() > 374) {
     var el = document.querySelector(".hero-content h1");
     el.outerHTML = "<h4>" + el.innerHTML + "</h4>";
-  } else if ($(window).width() < 370) {
+  } else if ($(window).width() < 375) {
     var el = document.querySelector(".hero-content h1");
     el.outerHTML = "<h5>" + el.innerHTML + "</h5>";
   }
