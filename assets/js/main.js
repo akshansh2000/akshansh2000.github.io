@@ -13,19 +13,18 @@ $(document).ready(function () {
 
   $(document).on("scroll", onScroll);
 
-  if ($(window).width() < 768) {
+  if ($(window).width() < 768 && $(window).width() > 444) {
     var el = document.querySelector(".hero-content h1");
     el.outerHTML = "<h2>" + el.innerHTML + "</h2>";
-  }
-
-  if ($(window).width() < 445) {
-    var el = document.querySelector(".hero-content h2");
+  } else if ($(window).width() < 445 && $(window).width() > 409) {
+    var el = document.querySelector(".hero-content h1");
     el.outerHTML = "<h3>" + el.innerHTML + "</h3>";
-  }
-
-  if ($(window).width() < 410) {
-    var el = document.querySelector(".hero-content h3");
+  } else if ($(window).width() < 410 && $(window).width() > 369) {
+    var el = document.querySelector(".hero-content h1");
     el.outerHTML = "<h4>" + el.innerHTML + "</h4>";
+  } else if ($(window).width() < 370) {
+    var el = document.querySelector(".hero-content h1");
+    el.outerHTML = "<h5>" + el.innerHTML + "</h5>";
   }
 
   $('a[href^="#"]').on("click", function (e) {
