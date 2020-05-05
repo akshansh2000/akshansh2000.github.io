@@ -46,5 +46,5 @@
   'Reply-To: '.$POST['email']."\r\n".
   'X-Mailer: PHP/'.phpversion();
 
-  mail($receiving_email_address, $_POST['subject'], $message, $headers);
+  @mail($receiving_email_address, $_POST['subject'], $message, $headers);
 ?>
