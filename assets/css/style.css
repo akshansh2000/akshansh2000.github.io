@@ -464,6 +464,10 @@ nav ul li a {
   overflow: hidden;
   min-height: 260px;
 }
+.portfolio-thumbnail:hover{
+  opacity:0.7;
+  
+}
 
 .portfolio-thumbnail img {
   max-width: 100%;
@@ -495,6 +499,9 @@ nav ul li a {
 .journal-block .row {
   flex-direction: row;
   justify-content: center;
+}
+.journal-info:hover{
+  opacity: 0.7;
 }
 
 #journal .journal-block .journal-info {
