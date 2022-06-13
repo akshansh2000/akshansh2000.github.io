@@ -1,0 +1,4 @@
+baseURL = 'http://akshansh2000.github.io/'
+languageCode = 'en-us'
+title = 'Akshansh Bhanjana'
+theme = "hugo-profile"
